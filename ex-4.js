@@ -1,3 +1,4 @@
+// Exercise 4
 const todos = [
   { topic: "Doing pre-work", completed: true },
   { topic: "Workout", completed: false },
@@ -7,7 +8,11 @@ const todos = [
 ];
 
 function getCompletedTodo(todos) {
-  // Start coding here
+  const completedTodos = todos.filter((todo) => {
+    // หรืออาจจะเขียนแบบนี้ได้ return todo.completed ซึ่งมีค่าเท่ากันกับบรรทัดด้านล่าง
+    return todo.completed === true;
+  });
+  return completedTodos;
 }
 
 getCompletedTodo(todos);
